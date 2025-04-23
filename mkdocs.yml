@@ -2,9 +2,6 @@ site_name: Service & Repair Docs
 theme: readthedocs
 nav:
   - Home: index.md
-  - Module Scripts:
-      - Collections: ModuleScripts/Collections.md
-      - ObjectiveUtil: ModuleScripts/ObjectiveUtil.md
   - Server Scripts:
       - Server: Server.md
   - Events:
@@ -20,8 +17,7 @@ nav:
   - Client Modules:
       - Audio: ClientModules/Audio.md
       - Camera: ClientModules/Camera.md
+      - Visuals: ClientModules/Visuals.md
   - Workflows:
       - Objectives: Objectives.md
- - Events:
-      - Objective Events: Events/ObjectiveEvents.md
 

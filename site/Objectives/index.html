@@ -96,7 +96,7 @@
 <p>This section describes the sequence of function calls that manage objectives. Below is the flow of the functions in the sequence:</p>
 <ol>
 <li><strong><a href="../ModuleScripts/Collections/"><code>Collections.InitializeMapObjects()</code></a></strong> - </li>
-<li><strong><a href="/ModuleScripts/Collections/#initializeobjectives"><code>Collections.InitializeObjectives()</code></a></strong> - Loops through all objects tagged "Objective" and calls <a href="../ModuleScripts/ObjectiveUtil/"><code>InitializeModel(model)</code></a></li>
+<li><strong><a href="ModuleScripts/Collections/#initializeobjectives"><code>Collections.InitializeObjectives()</code></a></strong> - Loops through all objects tagged "Objective" and calls <a href="../ModuleScripts/ObjectiveUtil/"><code>InitializeModel(model)</code></a></li>
 <li><strong><a href="../ModuleScripts/ObjectiveUtil/"><code>ObjectiveUtil.InitializeModel(model: Model</code>)</a></strong> - finds the model's proximity prompt and hooks up its <code>.Triggered</code> event to fire an client event () which passes the player that triggered the prompt and objective model.</li>
 </ol>
               

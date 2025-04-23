@@ -1,9 +1,7 @@
 # Collections
 
 ## Overview
-The Collections Module under [``Server``](/docs/Server.md) is used to handle initializing game objects.
-
-The `calculateArea` function calculates the area of a rectangle based on its length and width.
+The Collections Module under [``Server``](../Server.md) is used to handle initializing game objects.
 
 ## Functions
 ### `InitializeObjectives()`
