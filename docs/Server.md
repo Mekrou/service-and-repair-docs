@@ -13,4 +13,4 @@
 | dt: __number__ | The time (in seconds) that has elapsed since the previous frame. |
 
 #### Description
-Called every ``RunService`` ``.Stepped`` event. Calls [Collections](Collections.md) ``Update()`` function
+Called every ``RunService`` ``.Stepped`` event. Calls [Collections](ModuleScripts/Collections.md) ``Update()`` function
