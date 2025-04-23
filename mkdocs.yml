@@ -7,5 +7,7 @@ nav:
       - ObjectiveUtil: ModuleScripts/ObjectiveUtil.md
   - Server Scripts:
       - Server: Server.md
+  - Events:
+      - Objevtive Events: Events/ObjectiveEvents.md
   - Objectives: Objectives.md
 
