@@ -8,6 +8,6 @@ nav:
   - Server Scripts:
       - Server: Server.md
   - Events:
-      - Objevtive Events: Events/ObjectiveEvents.md
+      - Objective Events: Events/ObjectiveEvents.md
   - Objectives: Objectives.md
 
