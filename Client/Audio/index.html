@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Objective Events - Service & Repair Docs</title>
+    <title>Audio - Service & Repair Docs</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Objective Events";
-        var mkdocs_page_input_path = "Events\\ObjectiveEvents.md";
+        var mkdocs_page_name = "Audio";
+        var mkdocs_page_input_path = "Client\\Audio.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -53,14 +53,54 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Client</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../Client/">Main</a>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Main</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../Client/Audio/">Audio</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Audio</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#properties">Properties</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#maxemitters-number">MaxEmitters: number</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#description">Description:</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#init-init">Init: init()</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#description_1">Description:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#onemissionevent-onemissionevent">OnEmissionEvent: onEmissionEvent()</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_1">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#description_2">Description:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getsfx-getsfx">GetSFX: getSFX()</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters_2">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#description_3">Description:</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../Client/Camera/">Camera</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Camera/">Camera</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../Client/Visuals/">Visuals</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Visuals/">Visuals</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Workflows</span></p>
@@ -77,8 +117,8 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Events</span></p>
-              <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Objective Events</a>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Events/ObjectiveEvents/">Objective Events</a>
                   </li>
               </ul>
       </div>
@@ -95,8 +135,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Events</li>
-      <li class="breadcrumb-item active">Objective Events</li>
+          <li class="breadcrumb-item">Client</li>
+      <li class="breadcrumb-item active">Audio</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -105,12 +145,70 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                
+                <h1 id="audio">Audio</h1>
+<h2 id="properties">Properties</h2>
+<h3 id="maxemitters-number">MaxEmitters: <code>number</code></h3>
+<h4 id="description">Description:</h4>
+<p>MaxEmitters is used to create a limit to the size of the cache of emitters used in the audio module.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="init-init">Init: <code>init()</code></h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>()</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="description_1">Description:</h4>
+<p>This is the initialization function of the Audio Module. In the initialization, a Sound Origin is made to house the cache of sound emitters. Sounds from the library are also loaded into the game to reduce chances of the lack of audio or SFX in realtime gameplay.</p>
+<h3 id="onemissionevent-onemissionevent">OnEmissionEvent: <code>onEmissionEvent()</code></h3>
+<h4 id="parameters_1">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th><code>key</code></th>
+<th><code>from</code></th>
+<th><code>props</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string</code></td>
+<td><code>Vector3?</code></td>
+<td><code>SoundProperties</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="description_2">Description:</h4>
+<p>Emits an Audio whenever the bindable event: <code>EmitAudio</code> is fired on the client. Given the key, the sound will play at a given location with the given and supported properties found in a <code>Sound</code> Instance, such as <code>Volume</code> and <code>Distance</code>. If a given distance is not found, then the audio will be played via <code>game.SoundService:PlayLocalSound()</code></p>
+<h3 id="getsfx-getsfx">GetSFX: <code>getSFX()</code></h3>
+<h4 id="parameters_2">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th><code>key</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="description_3">Description:</h4>
+<p>This is a local function used to return a entry inside the audio module's <code>Library</code> module that holds all keys and <code>SoundID</code>'s.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../../Workflows/ObjectiveUtils/" class="btn btn-neutral float-left" title="ObjectiveUtils"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../" class="btn btn-neutral float-left" title="Main"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Camera/" class="btn btn-neutral float-right" title="Camera">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -133,8 +231,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../../Workflows/ObjectiveUtils/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../" style="color: #fcfcfc">&laquo; Previous</a></span>
     
+    
+      <span><a href="../Camera/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
