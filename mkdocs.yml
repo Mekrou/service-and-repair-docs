@@ -2,26 +2,19 @@ site_name: Service & Repair Docs
 theme: readthedocs
 nav:
   - Home: index.md
-  - Module Scripts:
-      - Collections: ModuleScripts/Collections.md
-      - ObjectiveUtil: ModuleScripts/ObjectiveUtil.md
-  - Server Scripts:
-      - Server: Server.md
-  - Events:
-      - Objective Events: Events/ObjectiveEvents.md
-  - Objectives: Objectives.md
   - Server:
-      - Main: Server.md
-  - Server Modules:
-      - Collections: ServerModules/Collections.md
-      - ObjectiveUtil: ServerModules/ObjectiveUtil.md
+      - Main: Server/index.md
+      - Collections: Server/Collections.md
+      - ObjectiveUtil: Server/ObjectiveUtil.md
   - Client:
-      - Main: Client.md
-  - Client Modules:
-      - Audio: ClientModules/Audio.md
-      - Camera: ClientModules/Camera.md
+      - Main: Client/index.md
+      - Audio: Client/Audio.md
+      - Camera: Client/Camera.md
   - Workflows:
-      - Objectives: Objectives.md
+      - Objectives: Workflows/Objectives.md
+      - Interface:
+          - Handlers: Workflows/UIHandlers.md
+          - ObjectiveUtils: Workflows/ObjectiveUtils.md
  - Events:
       - Objective Events: Events/ObjectiveEvents.md
 
