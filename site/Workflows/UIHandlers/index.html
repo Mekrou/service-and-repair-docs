@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Objective Events - Service & Repair Docs</title>
+    <title>Handlers - Service & Repair Docs</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Objective Events";
-        var mkdocs_page_input_path = "Events\\ObjectiveEvents.md";
+        var mkdocs_page_name = "Handlers";
+        var mkdocs_page_input_path = "Workflows\\UIHandlers.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -64,21 +64,33 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Workflows</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../Workflows/Objectives/">Objectives</a>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../Objectives/">Objectives</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" >Interface</a>
-    <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../../Workflows/UIHandlers/">Handlers</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Interface</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Handlers</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#composition">Composition</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#init-init">Init: init()</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#cleanup-cleanup">Cleanup: cleanup()</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../Workflows/ObjectiveUtils/">ObjectiveUtils</a>
+                <li class="toctree-l2"><a class="reference internal" href="../ObjectiveUtils/">ObjectiveUtils</a>
                 </li>
     </ul>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Events</span></p>
-              <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Objective Events</a>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Events/ObjectiveEvents/">Objective Events</a>
                   </li>
               </ul>
       </div>
@@ -95,8 +107,9 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Events</li>
-      <li class="breadcrumb-item active">Objective Events</li>
+          <li class="breadcrumb-item">Workflows</li>
+          <li class="breadcrumb-item">Interface</li>
+      <li class="breadcrumb-item active">Handlers</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -105,12 +118,57 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                
+                <h1 id="interface-handlers">Interface Handlers</h1>
+<p>UIHandlers is a psuedo-class module that initializes a frame or other UI components that are passed when intitializing Handler.</p>
+<h2 id="composition">Composition</h2>
+<p>UIHandlers are puesdo-classes, meaning that they behave as a collection of helper functions that are for specific instances that you pass as a parameter.</p>
+<p>These are very versitile for us in order to manage pieces of GUI without most of the code going inside our main <code>Interface</code> Module on the client.</p>
+<p>But UIHandlers are composed of atleast two functions.
+<code>init()</code> and <code>cleanup()</code>. As labeled, <code>init()</code> will initialize the ui element you want and <code>cleanup()</code> will stop the ui element from updating and will disconnect any connections created.</p>
+<p>To keep track of connections inside your <code>init()</code> function, handlers tend to keep an array inside the module. Inserting your connections into a array for later, easier cleanup of connections is a good practice to save unnecessary updates to non-visible interface.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="init-init">Init: <code>init()</code></h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th><code>frame</code></th>
+<th><code>any</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GuiBase</code></td>
+<td><code>...</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="description">Description:</h4>
+<p>A base function to initialize a Interface Handler, usually most init functions, you will just want your specific GUI instance you want to program and any necessary information you want afterwards.</p>
+<h3 id="cleanup-cleanup">Cleanup: <code>cleanup()</code></h3>
+<h4 id="parameters_1">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th><code>frame</code></th>
+<th><code>any</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GuiBase</code></td>
+<td><code>...</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="description_1">Description:</h4>
+<p>The base function used to hide, disconnect, and stop updating the given GUI instance. You could add any other necessary information as well if you'd like.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../../Workflows/ObjectiveUtils/" class="btn btn-neutral float-left" title="ObjectiveUtils"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Objectives/" class="btn btn-neutral float-left" title="Objectives"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../ObjectiveUtils/" class="btn btn-neutral float-right" title="ObjectiveUtils">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -133,8 +191,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../../Workflows/ObjectiveUtils/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../Objectives/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
+    
+      <span><a href="../ObjectiveUtils/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

@@ -11,6 +11,9 @@ nav:
       - Audio: Client/Audio.md
       - Camera: Client/Camera.md
       - Visuals: Client/Visuals.md
+      - Interface: 
+          - Interface: Client/Interface/index.md
+          - ObjectiveHandler: Client/Interface/ObjectiveHandler.md
   - Workflows:
       - Objectives: Workflows/Objectives.md
       - Interface:
