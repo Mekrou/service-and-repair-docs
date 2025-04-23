@@ -10,11 +10,12 @@ nav:
       - Main: Client/index.md
       - Audio: Client/Audio.md
       - Camera: Client/Camera.md
+      - Visuals: Client/Visuals.md
   - Workflows:
       - Objectives: Workflows/Objectives.md
       - Interface:
           - Handlers: Workflows/UIHandlers.md
           - ObjectiveUtils: Workflows/ObjectiveUtils.md
- - Events:
+  - Events:
       - Objective Events: Events/ObjectiveEvents.md
 

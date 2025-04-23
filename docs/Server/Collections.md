@@ -1,7 +1,7 @@
 # Collections
 
 ## Overview
-The Collections Module under [``Server``](../Server.md) is used to handle initializing game objects.
+The Collections Module under [``Server``](index.md) is used to handle initializing game objects.
 
 ## Functions
 ### `InitializeObjectives()`
