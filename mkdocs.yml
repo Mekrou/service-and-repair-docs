@@ -1,0 +1,11 @@
+site_name: Service & Repair Docs
+theme: readthedocs
+nav:
+  - Home: index.md
+  - Module Scripts:
+      - Collections: ModuleScripts/Collections.md
+      - ObjectiveUtil: ModuleScripts/ObjectiveUtil.md
+  - Server Scripts:
+      - Server: Server.md
+  - Objectives: Objectives.md
+
