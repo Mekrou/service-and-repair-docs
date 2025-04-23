@@ -62,6 +62,14 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../Client/Visuals/">Visuals</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" >Interface</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Client/Interface/">Interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Client/Interface/ObjectiveHandler/">ObjectiveHandler</a>
+                </li>
+    </ul>
+                  </li>
               </ul>
               <p class="caption"><span class="caption-text">Workflows</span></p>
               <ul>
@@ -79,6 +87,8 @@
               <p class="caption"><span class="caption-text">Events</span></p>
               <ul class="current">
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Objective Events</a>
+    <ul class="current">
+    </ul>
                   </li>
               </ul>
       </div>
@@ -105,7 +115,24 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                
+                <h1 id="objective-events">Objective Events</h1>
+<h1 id="prompt">Prompt</h1>
+<p><strong>Type:</strong> <code>RemoteEvent</code><br />
+<strong>Location:</strong> <code>ReplicatedStorage.Events.Prompt</code></p>
+<hr />
+<h2 id="description">Description</h2>
+<p><code>Prompt</code> is currently used to route all game objectives proximity prompts to a central handler, <a href="../../Client/Interface/ObjectiveHandler/#oninputfired">Client.Interface.ObjectiveHandler.OnInputFired(model: Model, interface: ScreenGui)</a></p>
+<hr />
+<h2 id="usage">Usage</h2>
+<h3 id="listening-client-or-server">🔁 Listening (Client or Server)</h3>
+<pre><code class="language-lua">local ReplicatedStorage = game:GetService(&quot;ReplicatedStorage&quot;)
+local MyCustomEvent = ReplicatedStorage:WaitForChild(&quot;Events&quot;):WaitForChild(&quot;MyCustomEvent&quot;)
+
+MyCustomEvent.Event:Connect(function(player)
+    print(player.Name .. &quot; completed the puzzle!&quot;)
+    -- Add client/server-side logic here
+end)
+</code></pre>
               
             </div>
           </div><footer>

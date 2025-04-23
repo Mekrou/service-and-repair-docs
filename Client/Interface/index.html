@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Objectives - Service & Repair Docs</title>
+    <title>Interface - Service & Repair Docs</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Objectives";
-        var mkdocs_page_input_path = "Workflows\\Objectives.md";
+        var mkdocs_page_name = "Interface";
+        var mkdocs_page_input_path = "Client\\Interface\\index.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -53,37 +53,33 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Client</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../Client/">Main</a>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Main</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../Client/Audio/">Audio</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Audio/">Audio</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../Client/Camera/">Camera</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Camera/">Camera</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../Client/Visuals/">Visuals</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Visuals/">Visuals</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" >Interface</a>
-    <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../../Client/Interface/">Interface</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Interface</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Interface</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../Client/Interface/ObjectiveHandler/">ObjectiveHandler</a>
+                <li class="toctree-l2"><a class="reference internal" href="ObjectiveHandler/">ObjectiveHandler</a>
                 </li>
     </ul>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Workflows</span></p>
-              <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Objectives</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#function-call-sequence">Function Call Sequence</a>
-    </li>
-    </ul>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Workflows/Objectives/">Objectives</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" >Interface</a>
     <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../UIHandlers/">Handlers</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../Workflows/UIHandlers/">Handlers</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../ObjectiveUtils/">ObjectiveUtils</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../Workflows/ObjectiveUtils/">ObjectiveUtils</a>
                 </li>
     </ul>
                   </li>
@@ -107,8 +103,9 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Workflows</li>
-      <li class="breadcrumb-item active">Objectives</li>
+          <li class="breadcrumb-item">Client</li>
+          <li class="breadcrumb-item">Interface</li>
+      <li class="breadcrumb-item active">Interface</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -117,21 +114,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="objectives">Objectives</h1>
-<h2 id="function-call-sequence">Function Call Sequence</h2>
-<p>This section describes the sequence of function calls that manage objectives. Below is the flow of the functions in the sequence:</p>
-<ol>
-<li><strong><a href="../../Server/Collections/"><code>Collections.InitializeMapObjects()</code></a></strong> - </li>
-<li><strong><a href="../../Server/Collections/"><code>Collections.InitializeObjectives()</code></a></strong> - Loops through all objects tagged "Objective" and calls <a href="../../Server/ObjectiveUtil/"><code>ObjectiveUtil.InitializeModel(model)</code></a></li>
-<li><strong><a href="../../Server/ObjectiveUtil/"><code>ObjectiveUtil.InitializeModel(model: Model</code>)</a></strong> - Finds the model's proximity prompt and hooks up its <code>.Triggered</code> event handler. Inside the handler, fires <a href="../../Events/ObjectiveEvents/#prompt"><code>Prompt</code></a> client event. This causes #4 to run:</li>
-<li><strong><a href="../../Client/Interface/ObjectiveHandler/#oninputfired"><code>Client.Interface.ObjectiveHandler.OnInputFired(model: Model, interface: ScreenGui)</code></a></strong></li>
-</ol>
+                
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../../Client/Interface/ObjectiveHandler/" class="btn btn-neutral float-left" title="ObjectiveHandler"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../UIHandlers/" class="btn btn-neutral float-right" title="Handlers">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Visuals/" class="btn btn-neutral float-left" title="Visuals"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="ObjectiveHandler/" class="btn btn-neutral float-right" title="ObjectiveHandler">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -154,10 +143,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../../Client/Interface/ObjectiveHandler/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../Visuals/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../UIHandlers/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="ObjectiveHandler/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
