@@ -6,6 +6,7 @@ nav:
       - Main: Server/index.md
       - Collections: Server/Collections.md
       - ObjectiveUtil: Server/ObjectiveUtil.md
+      - LaserEmitter: Server/LaserEmitter.md
       - Generation:
           - Main: Server/Generation/index.md
           - TileMaskHelper: Server/Generation/TileMaskHelper.md
