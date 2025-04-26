@@ -49,7 +49,31 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../Server/Collections/">Collections</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../Server/ObjectiveUtil/">ObjectiveUtil</a>
+                  <li class="toctree-l1"><a class="reference internal" >Objectives</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Server/Objectives/ObjectiveUtil/">ObjectiveUtil</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >LaserObjective</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../Server/Objectives/LaserObjective/">LaserObjective</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Server/Objectives/LaserObjective/LaserUtil/">LaserUtil</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Server/Objectives/LaserObjective/MirrorSolver/">MirrorSolver</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Server/LaserEmitter/">LaserEmitter</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Generation</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Server/Generation/">Main</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Server/Generation/TileMaskHelper/">TileMaskHelper</a>
+                </li>
+    </ul>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Client</span></p>
@@ -61,6 +85,12 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../Client/Camera/">Camera</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../Client/Visuals/">Visuals</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Camera</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Client/Camera/CameraController/">CameraController</a>
+                </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" >Interface</a>
     <ul>
@@ -78,6 +108,8 @@
     <li class="toctree-l2"><a class="reference internal" href="#function-call-sequence">Function Call Sequence</a>
     </li>
     </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../CreatingACamera/">Creating a Camera</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" >Interface</a>
     <ul>
@@ -122,8 +154,8 @@
 <p>This section describes the sequence of function calls that manage objectives. Below is the flow of the functions in the sequence:</p>
 <ol>
 <li><strong><a href="../../Server/Collections/"><code>Collections.InitializeMapObjects()</code></a></strong> - </li>
-<li><strong><a href="../../Server/Collections/"><code>Collections.InitializeObjectives()</code></a></strong> - Loops through all objects tagged "Objective" and calls <a href="../../Server/ObjectiveUtil/"><code>ObjectiveUtil.InitializeModel(model)</code></a></li>
-<li><strong><a href="../../Server/ObjectiveUtil/"><code>ObjectiveUtil.InitializeModel(model: Model</code>)</a></strong> - Finds the model's proximity prompt and hooks up its <code>.Triggered</code> event handler. Inside the handler, fires <a href="../../Events/ObjectiveEvents/#prompt"><code>Prompt</code></a> client event. This causes #4 to run:</li>
+<li><strong><a href="../../Server/Collections/"><code>Collections.InitializeObjectives()</code></a></strong> - Loops through all objects tagged "Objective" and calls <a href="../Server/ObjectiveUtil.md"><code>ObjectiveUtil.InitializeModel(model)</code></a></li>
+<li><strong><a href="../Server/ObjectiveUtil.md"><code>ObjectiveUtil.InitializeModel(model: Model</code>)</a></strong> - Finds the model's proximity prompt and hooks up its <code>.Triggered</code> event handler. Inside the handler, fires <a href="../../Events/ObjectiveEvents/#prompt"><code>Prompt</code></a> client event. This causes #4 to run:</li>
 <li><strong><a href="../../Client/Interface/ObjectiveHandler/#oninputfired"><code>Client.Interface.ObjectiveHandler.OnInputFired(model: Model, interface: ScreenGui)</code></a></strong></li>
 </ol>
               
@@ -131,7 +163,7 @@
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../../Client/Interface/ObjectiveHandler/" class="btn btn-neutral float-left" title="ObjectiveHandler"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../UIHandlers/" class="btn btn-neutral float-right" title="Handlers">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../CreatingACamera/" class="btn btn-neutral float-right" title="Creating a Camera">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -157,7 +189,7 @@
       <span><a href="../../Client/Interface/ObjectiveHandler/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../UIHandlers/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../CreatingACamera/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
