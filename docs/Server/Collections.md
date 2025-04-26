@@ -12,4 +12,4 @@ The Collections Module under [``Server``](index.md) is used to handle initializi
 | ``()`` |
 
 #### Description
-Loops through all objects tagged "Objective" and calls [``InitializeModel(model)``](ObjectiveUtil.md)
+Loops through all objects tagged "Objective" and calls [``InitializeModel(model)``](Objectives/ObjectiveUtil.md)

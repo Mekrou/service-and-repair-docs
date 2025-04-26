@@ -5,7 +5,12 @@ nav:
   - Server:
       - Main: Server/index.md
       - Collections: Server/Collections.md
-      - ObjectiveUtil: Server/ObjectiveUtil.md
+      - Objectives: 
+          - ObjectiveUtil: Server/Objectives/ObjectiveUtil.md
+          - LaserObjective: 
+              - LaserObjective: Server/Objectives/LaserObjective/index.md
+              - LaserUtil: Server/Objectives/LaserObjective/LaserUtil.md
+              - MirrorSolver: Server/Objectives/LaserObjective/MirrorSolver.md
       - LaserEmitter: Server/LaserEmitter.md
       - Generation:
           - Main: Server/Generation/index.md
