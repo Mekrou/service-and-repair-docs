@@ -25,6 +25,7 @@ nav:
       - Interface: 
           - Interface: Client/Interface/index.md
           - ObjectiveHandler: Client/Interface/ObjectiveHandler.md
+          - PromptHandler: Client/Interface/PromptHandler.md
   - Workflows:
       - Objectives: Workflows/Objectives.md
       - Creating a Camera: Workflows/CreatingACamera.md
