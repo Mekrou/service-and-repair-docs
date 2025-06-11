@@ -34,4 +34,6 @@ nav:
           - ObjectiveUtils: Workflows/ObjectiveUtils.md
   - Events:
       - Objective Events: Events/ObjectiveEvents.md
+  - Lore:
+      - The Null: Lore/TheNull.md
 

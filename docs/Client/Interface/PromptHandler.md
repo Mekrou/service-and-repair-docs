@@ -2,7 +2,7 @@
 
 ## About
 The PromptHandler is responsible for handling the styling and formatting of the proximity prompts on the client.
-If you want to affect the behavior of the prompts, visit the [``ObjectiveUtil``](/docs/Server/Objectives/ObjectiveUtil.md) for futher information.
+If you want to affect the behavior of the prompts, visit the [``ObjectiveUtil``](../../Server/Objectives/ObjectiveUtil.md) for futher information.
 
 The prompt interface is a ImageButton to allow clicking and tapping of the prompt if desired, along with formatted keybinds to support keyboard and console players.
 
